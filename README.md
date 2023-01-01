@@ -4,20 +4,37 @@ The official repository for the Findings of EMNLP 2022 Paper, **EnDex: Evaluatio
 A link to paper available from here: [https://arxiv.org/pdf/2210.12362.pdf]
 
 
-## We release the training data and the script to train an engagingness classifier.
-
+## We release the training data
+See 
 
 
 ## We also provide an off-the-shelf model that can be directly downloaded to use.
 
-The model can be manually downloaded from this link: 
+The model can be manually downloaded from this link: [https://drive.google.com/file/d/1ph4P471n0LoM1vbsarj3wvEkpijhwCms/view?usp=sharing]
+It is too large to be successfully downloaded in script. 
 
-Alternatively, use the following script to download. 
-
+Then, unzip the file into a folder named endex_model0
+```
+unzip endex_model0.zip
+```
 
 ## Usage
 
-after you have trained/downloaded a model, you can run the following script to run inference, on a file or a single text sentence. 
+After you have trained/downloaded a model, you can run the following script to run inference on an example text sentence. 0 means non-engaging and 1 means engaging. 
+**Please make sure to have appropriate versions of pytorch and huggingface transformers installed **
+
+```
+import torch
+from transformers import RobertaTokenizer,RobertaForSequenceClassification
+tokenizer = RobertaTokenizer.from_pretrained("roberta-large")
+model_dir = 'the/directory/to/your/unzipped_folder'
+model = RobertaForSequenceClassification.from_pretrained(model_dir)
+inputs = tokenizer("it's such a great point, and i'd love to hear back on your thoughts!", return_tensors="pt")
+with torch.no_grad():
+    logits = model(**inputs).logits
+predicted_class_id = logits.argmax().item()
+print('the engagingness prediction of the input sentence is: ', predicted_class_id)
+```
 
 
 
