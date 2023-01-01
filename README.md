@@ -24,7 +24,7 @@ unzip endex_model0.zip
 **Please make sure to have appropriate versions of pytorch and huggingface transformers installed **
 ```
 Our versions:
-torch.__version__ == 1.10.1+cu111'
+torch.__version__ == '1.10.1+cu111'
 transformers.__version__ == '4.14.0'
 ```
 
