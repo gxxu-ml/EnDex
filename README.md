@@ -5,7 +5,11 @@ A link to paper available from here: [https://arxiv.org/pdf/2210.12362.pdf]
 
 
 ## Release Training Data
-See 
+See the following link to download [https://drive.google.com/file/d/1Jjpne-1CoOp8Ej5QFeX8ry_2plasc1pc/view?usp=sharing]. 
+The files with suffix ns means they include negative sampled data. Our released off-the-shelf model is trained on an 80k split with negative sampled data. For details about negative sampling, please read the paper. 
+
+We provided multiple data splits, so that interested researchers can try to train different on those splits to test performance.
+
 
 
 ## Off-the-shelf Model.
