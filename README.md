@@ -15,7 +15,9 @@ The model can be manually downloaded from this link:
 Alternatively, use the following script to download. 
 
 
-## Usage, after you have trained/downloaded a model, you can run the following script to run inference, on a file or a single text sentence. 
+## Usage
+
+after you have trained/downloaded a model, you can run the following script to run inference, on a file or a single text sentence. 
 
 
 
