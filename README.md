@@ -4,11 +4,11 @@ The official repository for the Findings of EMNLP 2022 Paper, **EnDex: Evaluatio
 A link to paper available from here: [https://arxiv.org/pdf/2210.12362.pdf]
 
 
-## We release the training data
+## Release Training Data
 See 
 
 
-## We also provide an off-the-shelf model that can be directly downloaded to use.
+## Off-the-shelf Model.
 
 The model can be manually downloaded from this link: [https://drive.google.com/file/d/1ph4P471n0LoM1vbsarj3wvEkpijhwCms/view?usp=sharing]
 It is too large to be successfully downloaded in script. 
@@ -20,8 +20,15 @@ unzip endex_model0.zip
 
 ## Usage
 
-After you have trained/downloaded a model, you can run the following script to run inference on an example text sentence. 0 means non-engaging and 1 means engaging. 
+
 **Please make sure to have appropriate versions of pytorch and huggingface transformers installed **
+```
+Our versions:
+torch.__version__ == 1.10.1+cu111'
+transformers.__version__ == '4.14.0'
+```
+
+After you have trained/downloaded a model, you can run the following script to run inference on an example text sentence. 0 means non-engaging and 1 means engaging. 
 
 ```
 import torch
